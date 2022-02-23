@@ -3,20 +3,27 @@ import React from 'react'
 import { useNavigation, NavigationContainer } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import Routes from './src/routes';
+
+import RoutesBottom from './src/routesBottom';
+import RoutesHeader from './src/routesHeader';
 
 const Courses = () => {
     const navigation = useNavigation();
-  return (
+  return (<>    
     <SafeAreaView>
     
         <Button onPress={()=> navigation.navigate("Home") } title="Home"/>
-        
-        <NavigationContainer independent={true}>
-          <Routes />
-        </NavigationContainer>
+        <RoutesHeader/>
+       
     
-    </SafeAreaView>
+    </SafeAreaView> 
+    
+    <NavigationContainer independent={true}>
+          <RoutesBottom />
+        </NavigationContainer>
+
+      </>
+
   )
 }
 

@@ -3,16 +3,16 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 
-import Courses from "./pages/Courses";
-import Search from "./pages/Search";
-import Wishes from "./pages/Wishes";
+import Courses from "./pagesBottom/Courses";
+import Search from "./pagesBottom/Search";
+import Wishes from "./pagesBottom/Wishes";
 
 import {Entypo, Feather} from '@expo/vector-icons' 
 
 
 const Tab = createBottomTabNavigator();
 
-export default function Routes(){
+export default function RoutesBottom(){
     return(
         <Tab.Navigator 
         screenOptions={{style:{
